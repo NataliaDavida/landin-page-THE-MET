@@ -1,0 +1,58 @@
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  background-position: center;
+  transition: $effectDuration;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @include onTablet {
+    height: 32px;
+    width: 32px;
+  }
+
+  &__contacts {
+    position: absolute;
+    top: -26px;
+    right: 48px;
+    width: max-content;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: end;
+    opacity: 0;
+    pointer-events: none;
+    transition: $effectDuration;
+  }
+
+  &__contact {
+    margin: 0;
+  }
+
+  &--phone {
+    background-image: url("images/icons/phone.png");
+
+    @include onDesktop {
+      &:hover .icon__contacts {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &--menu {
+    background-image: url("images/icons/icon-burger-menu.png");
+    transition: $effectDuration;
+
+    &:hover {
+      background-image: url("images/icons/icon-burger-menu-hover.png");
+    }
+  }
+
+  &--close {
+    background-image: url("images/icons/icon-close.png");
+  }
+}

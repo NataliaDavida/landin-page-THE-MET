@@ -1,0 +1,81 @@
+.card {
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    color: $accent-color;
+
+    margin: 0;
+    margin-top: 24px;
+    padding: 0;
+  }
+
+  &__photos {
+    @include pageGrid;
+  }
+
+  &__photos--column--3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8px;
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 24px;
+    }
+    @include onDesktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__photo {
+    transition: 0.5s ease-in;
+    &--wide {
+      @include onTablet {
+        grid-column: span 4;
+      }
+
+      @include onDesktop {
+        grid-column: span 8;
+      }
+    }
+
+    &--squere {
+      @include onTablet {
+        grid-column: span 2;
+
+      }
+
+      @include onDesktop {
+        grid-column: span 4;
+      }
+    }
+
+    &--hiden {
+      @include onTablet {
+        display: none;
+      }
+      @include onDesktop {
+        display: block;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__timetable {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 48px;
+  }
+
+}

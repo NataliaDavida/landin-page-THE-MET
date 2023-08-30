@@ -1,0 +1,24 @@
+.nav-on-view {
+  &__sub-title {
+    @include pageGrid;
+    margin-bottom: 48px;
+  }
+
+  &__sub-title-content {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 0;
+
+    @include onTablet {
+      grid-column: 2 / -2;
+    }
+
+    @include onDesktop{
+      grid-column: 5 / -5;
+    }
+  }
+
+  &__btn {
+    @include pageGrid;
+  }
+}

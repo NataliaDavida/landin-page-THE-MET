@@ -1,0 +1,87 @@
+.contacts {
+  &__wrapper {
+    @include pageGrid;
+    padding-top: 48px;
+    row-gap: 48px;
+  }
+
+  &__locations {
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 1 / 4;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 7;
+    }
+  }
+
+  &__location-wrapper {
+    display: grid;
+    row-gap: 48px;
+  }
+
+  &__fifth-avenue {
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 1 / 4;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 4;
+    }
+  }
+
+  &__cloisters {
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 1 / 4;
+    }
+
+    @include onDesktop {
+      grid-column: 4 / 7;
+    }
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+
+    &--location {
+      margin-bottom: 16px;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+
+    &--phone {
+      margin-bottom: 16px;
+    }
+
+    &--link {
+      text-decoration: none;
+      color: $main-text-color;
+      transition: 0.5s ease-in;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+
+  &__form-wrapper {
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 4 / 7;
+    }
+
+    @include onDesktop {
+      grid-column: 8 / 13;
+    }
+  }
+}

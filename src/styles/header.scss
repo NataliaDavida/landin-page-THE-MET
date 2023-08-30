@@ -1,0 +1,45 @@
+.header {
+  background-image: url("images/header-bg-sm.png");
+  background-size: cover;
+  background-position: center;
+
+  @include onTablet {
+    background-image: url("images/header-bg-md.png");
+  }
+
+  @include onDesktop {
+    background-image: url("images/header-bg-lr.png");
+  }
+
+  &__content {
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    padding-top: 138px;
+    place-self: center;
+    margin: 0;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1.5px;
+    text-align: center;
+    text-transform: uppercase;
+    align-self: center;
+    color: #fff;
+
+    @include onTablet {
+      font-size: 64px;
+      line-height: 64px;
+      padding-top: 142px;
+    }
+
+    @include onDesktop{
+      font-size: 84px;
+      line-height: 80px;
+      padding-top: 148px;
+    }
+  }
+}

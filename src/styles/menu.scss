@@ -1,0 +1,53 @@
+.menu {
+  background-color: #d12d35;
+  overflow: auto;
+
+  &__content {
+    height: 100vh;
+    overflow: auto;
+  }
+
+  &__top {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__nav {
+    margin-top: 40px;
+    margin-bottom: 32px;
+
+    @include onDesktop {
+      margin-top: 55px;
+      margin-bottom: 48px;
+    }
+  }
+
+  &__locations {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+ &__link {
+    display: block;
+    margin: 0;
+
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s ease-in;
+
+    &:hover {
+      color: #f8f8f8c0;
+    }
+ }
+
+  &__link--call-to-order {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #fff;
+    width: fit-content;
+  }
+}
+
